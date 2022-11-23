@@ -1,0 +1,68 @@
+@charset "UTF-8";
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+  margin: 0;
+  padding: 0;
+}
+
+body, input, textarea, select, button, table {
+  font-family: "나눔고딕", NanumGothic, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, "굴림", Gulim, Helvetica;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  background: #f4f4f4;
+  color: #000;
+  -webkit-text-size-adjust: none;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+body {
+  background-color: #fff;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 0 14px;
+  background: #ffffff;
+}
+
+.navigation {
+  border-bottom: 3px solid #000;
+}
+.navigation-btn {
+  display: block;
+}
+.cm .reference {
+  font-size: 0.875rem;
+}
+.cm .reference:before {
+  display: inline;
+  content: "└ ";
+  width: 33px;
+  padding-left: 7px;
+  color: #999;
+}
+
+/*# sourceMappingURL=common.css.map */
