@@ -8,13 +8,9 @@ body, input, textarea, select, button, table {
   font-family: "나눔고딕", NanumGothic, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, "굴림", Gulim, Helvetica;
 }
 
-html {
-  font-size: 16px;
-}
-
 body {
   position: relative;
-  background: #f4f4f4;
+  background: #fff;
   color: #000;
   -webkit-text-size-adjust: none;
 }
@@ -36,33 +32,36 @@ table {
   border-collapse: collapse;
 }
 
-body {
-  background-color: #fff;
-  word-wrap: break-word;
-  word-break: break-all;
+.gnb {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f4f4f4;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.gnb__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1280px;
+}
+.gnb-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.gnb-btn .btn {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
 }
 
-.wrap {
-  margin: 0 auto;
-  padding: 0 14px;
-  background: #ffffff;
-}
-
-.navigation {
-  border-bottom: 3px solid #000;
-}
-.navigation-btn {
-  display: block;
-}
-.cm .reference {
-  font-size: 0.875rem;
-}
-.cm .reference:before {
-  display: inline;
-  content: "└ ";
-  width: 33px;
-  padding-left: 7px;
-  color: #999;
+.cont__inner {
+  max-width: 1280px;
 }
 
 /*# sourceMappingURL=common.css.map */
