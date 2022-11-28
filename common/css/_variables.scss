@@ -1,5 +1,29 @@
-$screen-s : 768px;
+$base-font-size: 16px;
+
+/*** font ***/
+// 참고 url : https://sunn.us/suit/
+$font-suit:'SUIT', sans-serif;
+
+@function remove-unit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+@function rem($px, $base: $base-font-size) {
+  @return (remove-unit($px / $base))* 1rem;
+}
+
+/*** color ***/
+$point-color1: #3d1797;
+$point-color-dark: #262626;
+$back-color: #555;
+$sub-color: #7f7f7f;
+
+/*** screen size ***/
+$screen-s: 768px;
 $screen-ms: 1024px; 
 $screen-m: 1280px;
 $screen-l: 1680px;
 $screen-xl: 1920px;
+
+/*** transition ***/
+$base-transition: all .3s;
