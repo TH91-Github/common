@@ -5,11 +5,11 @@ $base-font-size: 16px;
 $font-suit:'SUIT', sans-serif;
 
 @function remove-unit($value) {
-  @return ($value / ($value * 0 + 1));
+  @return calc($value / ($value * 0 + 1));
 }
 
 @function rem($px, $base: $base-font-size) {
-  @return (remove-unit($px / $base))* 1rem;
+  @return (remove-unit(calc($px / $base)))* 1rem;
 }
 
 /*** color ***/
@@ -27,3 +27,17 @@ $screen-xl: 1920px;
 
 /*** transition ***/
 $base-transition: all .3s;
+
+/*** mixin **/
+@mixin ellipsis($line, $hiehgt:$base-font-size){
+  display: -webkit-box;
+  overflow:hidden;
+  @if not ($hiehgt == $base-font-size) { /* 기본 사이즈가 아닐 경우 */
+    height:$hiehgt*$line;
+  }
+  -webkit-line-clamp:$line;
+  -webkit-box-orient: vertical;
+  white-space:normal;
+  word-break: break-all;
+  text-overflow:ellipsis;
+}
