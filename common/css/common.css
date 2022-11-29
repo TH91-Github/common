@@ -50,7 +50,7 @@ html, body {
 .wrap {
   overflow: hidden;
   position: relative;
-  height: 100%;
+  min-height: 100%;
 }
 .wrap:before {
   position: absolute;
