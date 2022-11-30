@@ -1,12 +1,4 @@
 @import './variables';
-body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
-body,input,textarea,select,button,table{font-family:$font-suit;}
-body{position:relative;background:#fff;color:$point-color-dark;-webkit-text-size-adjust:none}
-img,fieldset{border:0}
-ul,ol{list-style:none}
-a{color:#000;text-decoration:none}
-table{border-collapse:collapse}
-button {cursor:pointer; outline:0; border:0;}
 
 html, body {height:100%;}
 .wrap {
@@ -32,7 +24,7 @@ html, body {height:100%;}
       &:before{
         position:absolute;
         left:0;
-        background: $sub-color;
+        background: $sub-color1;
         content:"";
       }
       .none, .base, &:not([class]){
@@ -74,6 +66,27 @@ html, body {height:100%;}
         content:"※";
       }
     }
+  }
+  &-mark{
+    position:relative;
+    padding-left:12px;
+    &::before, &::after {
+      position:absolute;
+      top:50%;
+      left:0;
+      width:8px;
+      height:2px;
+      border-radius:2px;
+      content:""
+    }
+    &::before {
+      background: $point-color3;
+      transform: rotate(90deg);
+    }
+    &::after {
+      background: $point-color2;
+    }
+
   }
 }
 .gnb {
@@ -338,7 +351,7 @@ $cm-name: 'category';
       @include ellipsis(1);
       box-sizing: border-box;
       .date {
-        color:$sub-color;
+        color:$sub-color1;
       }
     }
   }
@@ -399,7 +412,7 @@ $cm-name: 'category';
           &>a {
             display:inline-block;
             padding:3px;
-            border:1px solid $sub-color;
+            border:1px solid $sub-color1;
           }
           .btn{
             font-size: rem(14px);

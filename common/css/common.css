@@ -4,45 +4,6 @@
 /*** screen size ***/
 /*** transition ***/
 /*** mixin **/
-body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
-  margin: 0;
-  padding: 0;
-}
-
-body, input, textarea, select, button, table {
-  font-family: "SUIT", sans-serif;
-}
-
-body {
-  position: relative;
-  background: #fff;
-  color: #262626;
-  -webkit-text-size-adjust: none;
-}
-
-img, fieldset {
-  border: 0;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-button {
-  cursor: pointer;
-  outline: 0;
-  border: 0;
-}
-
 html, body {
   height: 100%;
 }
@@ -104,6 +65,26 @@ html, body {
   background: none;
   font-size: 0.75rem;
   content: "※";
+}
+.cm-mark {
+  position: relative;
+  padding-left: 12px;
+}
+.cm-mark::before, .cm-mark::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 2px;
+  border-radius: 2px;
+  content: "";
+}
+.cm-mark::before {
+  background: #f24c4c;
+  transform: rotate(90deg);
+}
+.cm-mark::after {
+  background: #1c7947;
 }
 
 .gnb {
@@ -170,7 +151,7 @@ html, body {
   position: relative;
   width: 30px;
   height: 30px;
-  border: 1px solid #555;
+  border: 1px solid #666;
   border-radius: 5px;
   background: #fff;
   transition: all 0.3s;
@@ -183,14 +164,14 @@ html, body {
 .category__select .btn .txt::before, .category__select .btn .txt::after {
   display: block;
   position: absolute;
-  background: #555;
+  background: #666;
   transition: all 0.3s;
   content: "";
 }
 .category__select .btn::before, .category__select .btn::after {
   display: block;
   position: absolute;
-  background: #555;
+  background: #666;
   transition: all 0.3s;
   content: "";
 }

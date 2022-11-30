@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click</title>
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<!-- s: codepen:css -->
+<style>
+.click-box {display:flex;}
+.jquery-click {padding-left:10px; margin-left:10px; border-left :1px solid #000;}
+</style>
+<!-- e: codepen:css -->
+</head>
+<body>
+  <div class="category-cont">
+    <!-- s: codepen:html -->
+    <div class="click-box">
+      <div class="js-click">
+        <p class="cm-mark">Javascript</p>
+        <div class="btn-article">
+          <button type="button" class="btn cm-btn">button</button>
+          <a href="#" class="btn cm-btn" title="button">a : button</a>
+        </div>
+        <div class="console-box"></div>
+      </div>
+      <div class="jquery-click">
+        <p class="cm-mark">Jquery</p>
+        <div class="btn-article">
+          <button type="button" class="btn cm-btn">button</button>
+          <a href="#" class="btn cm-btn" title="button">a : button</a>
+        </div>
+        <div class="console-box"></div>
+      </div>
+    </div>
+    <!-- e: codepen:html -->
+  </div>
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- s: codepen:js -->
+<script>
+// DOM객체. addEventListener(이벤트명, 실행할 함수명, 옵션)
+function inJsClick(){
+  let jsEvent = document.querySelector('.js-click'),
+      clickThis = jsEvent.querySelectorAll('.btn'),
+      previewAction = jsEvent.querySelector('.console-box');
+
+  clickThis.forEach(function(el,index){
+    el.addEventListener("click",baseClick);
+  });
+
+  function baseClick(e){
+    previewAction.innerText = "click";
+    setTimeout(function(){
+      previewAction.innerText="";
+    },1000);
+  }
+}
+inJsClick(); // js
+
+function inJqueryClick(_el,_parent){
+  let jqueryEvent = $('.jquery-click'),
+      clickThis = jqueryEvent.find('.btn')
+      previewAction = jqueryEvent.find('.console-box');
+    clickThis.on("click", function(){
+    previewAction.text("click");
+    setTimeout(function(){
+      previewAction.text("");
+    },1000);
+    return false;
+  });
+}
+inJqueryClick();
+</script>
+<!-- e: codepen:js -->
+</body>
+</html>
