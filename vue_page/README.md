@@ -1,4 +1,4 @@
-# page
+# vue_page
 
 ## Project setup
 ```
